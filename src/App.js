@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 
 import { Home } from "./Home";
@@ -10,12 +10,12 @@ function App() {
       <div className="App">
         <Link to="/">Home</Link>
         <br />
-        <Link to="/New">New</Link>
+        <Link to="/thread/new">New</Link>
         <br />
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/New" element={<New />} />
+          <Route path="/thread/new" element={<New />} />
         </Routes>
       </div>
     </Router>
