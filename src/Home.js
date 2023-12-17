@@ -1,4 +1,6 @@
+//Home.js
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom"; //追加
 
 export const Home = () => {
   const [threads, setThreads] = useState([]); // スレッドを管理するステート
@@ -28,8 +30,11 @@ export const Home = () => {
     <div>
       <h1>スレッド一覧</h1>
       <ul>
+        {/* 追加 */}
         {threads.map((thread) => (
-          <li key={thread.id}>{thread.title}</li>
+          <li key={thread.id}>
+            <Link to={`/thread/${thread.id}`}>{thread.title}</Link>
+          </li>
         ))}
       </ul>
     </div>
