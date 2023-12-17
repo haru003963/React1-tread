@@ -24,7 +24,11 @@ export const New = ({ onAddThread }) => {
   return (
     <div>
       <h1>新しいスレッド作成</h1>
-      <input value={text} onChange={(event) => setText(event.target.value)} />
+      <input
+        type="text"
+        value={text}
+        onChange={(event) => setText(event.target.value)}
+      />
       <button onClick={onClickAddText}>追加</button>
     </div>
   );

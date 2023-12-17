@@ -1,38 +1,71 @@
-.App {
+/* App.css */
+
+/* ナビゲーション */
+.navigation {
+  background-color: #b4cbd3;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  /* HomeとNewの間に空白を入れる */
+  gap: 10px;
+}
+
+div {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* PostList.js */
+/* 投稿一覧のスタイリング */
+ul {
+  list-style: none;
+  padding: 0;
+  /* タイトル一覧の枠を内側に縮める */
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li {
+  color: #5e5e5c;
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 1px solid #d3cc82;
+  border-radius: 8px;
+  background-color: #d3cc82;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input[type="text"] {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #d5e6ea;
+  /* テキストボックスとボタンの間に空白入れる */
+  margin-right: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  padding: 5px 10px;
+  background-color: #d5e6ea;
+  color: #5e5e5c;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background-color: #b4cbd3;
+}
+
+a {
+  color: #5e5e5c;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+h1 {
+  color: #5e5e5c;
 }

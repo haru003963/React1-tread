@@ -6,19 +6,21 @@ import { Home } from "./Home";
 import { New } from "./New";
 import { PostList } from "./PostList"; //スレッド投稿一覧
 
+import "./App.css"; // ここでApp.cssをインポートする
+
 function App() {
   return (
     <Router>
       <div className="App">
-        <Link to="/">Home</Link>
-        <br />
-        <Link to="/thread/new">New</Link>
-        <br />
-
+        <nav className="navigation">
+          {" "}
+          {/* ナビゲーションのスタイリング */}
+          <Link to="/">Home</Link>
+          <Link to="/thread/new">New</Link>
+        </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/thread/new" element={<New />} />
-          {/* 追加 */}
           <Route path="/thread/:threadId" element={<PostList />} />
         </Routes>
       </div>

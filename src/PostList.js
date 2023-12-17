@@ -22,9 +22,9 @@ const PostList = () => {
       const data = await response.json();
       console.log(data); // データの中身を確認
 
-      // 'posts' プロパティのデータをセット
+      //データが正しい形式かを確認
       if (data && Array.isArray(data.posts)) {
-        setPosts(data.posts); // 'posts' データをセット
+        setPosts(data.posts); // 'posts' にデータをセット
       } else {
         throw new Error("投稿データが不正です。");
       }
@@ -36,6 +36,7 @@ const PostList = () => {
   // threadIdが変更されるたびにfetchPosts関数を呼び出す
   useEffect(() => {
     if (threadId) {
+      //threadIdが存在する場合
       fetchPosts(); // ここでfetchPostsを呼び出し
     }
   }, [threadId]);
@@ -66,11 +67,13 @@ const PostList = () => {
       <h1>投稿一覧</h1>
       {/* 投稿フォーム */}
       <div>
+        {/* テキストボックス */}
         <input
           type="text"
           value={newPostContent}
           onChange={(event) => setNewPostContent(event.target.value)}
         />
+        {/* 投稿ボタンを押したらhandleNewPost関数を実行 */}
         <button onClick={handleNewPost}>投稿</button>
       </div>
 
